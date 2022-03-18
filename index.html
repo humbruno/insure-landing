@@ -36,13 +36,91 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-6 bg-primary">a</div>
-        <div class="col-6">b</div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.svg" alt="Insure logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span>
+            <img src="images/icon-hamburger.svg" alt="Toggle navigation" />
+          </span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-secondary" href="#"
+                >How we work</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-secondary" href="#"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-secondary" href="#"
+                >Account</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-secondary" href="#"
+                >View plans</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row position-relative">
+      <img
+        class="d-lg-none img-fluid"
+        src="images/image-intro-mobile.jpg"
+        alt=""
+      />
+      <img
+        class="d-none d-lg-block alo"
+        src="images/image-intro-desktop.jpg"
+        alt=""
+      />
+    </div>
+
+    <div class="row bg-primary m-0 custom-hero align-items-center">
+      <div class="col-lg-6 text-light">
+        <h1 class="text-center text-lg-start">
+          Humanizing <br />
+          your insurance.
+        </h1>
+        <p class="text-center text-lg-start">
+          Get your life insurance coverage easier and faster. We blend our
+          expertise and technology to help you find the plan that’s right for
+          you. Ensure you and your loved ones are protected.
+        </p>
+
+        <div class="row">
+          <div class="col text-center text-lg-start">
+            <button type="button" class="btn btn-light text-uppercase">
+              View plans
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    How we work Blog Account View plans Humanizing your insurance. Get your life
+
+    <!-- How we work Blog Account View plans  Get your life
     insurance coverage easier and faster. We blend our expertise and technology
     to help you find the plan that’s right for you. Ensure you and your loved
     ones are protected. View plans We’re different Snappy Process Our
@@ -53,7 +131,7 @@
     clauses to prevent payouts. We make sure you’re covered when you need it.
     Find out more about how we work How we work Our company How we work Why
     Insure? View plans Reviews Help me FAQ Terms of use Privacy policy Cookies
-    Contact Sales Support Live chat Others Careers Press Licenses
+    Contact Sales Support Live chat Others Careers Press Licenses -->
 
     <!-- Bootstrap JS -->
     <script
