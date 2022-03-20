@@ -1,14 +1,22 @@
 {
   "name": "insure-landing",
   "version": "1.0.0",
-  "description": "This is a solution to the [Insure landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
-  "main": "index.js",
+  "description": "This is a solution to the [Insure landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8).",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humbruno/insure-landing.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humbruno/insure-landing/issues"
+  },
+  "homepage": "https://github.com/humbruno/insure-landing#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "cssnano": "^5.1.4",
@@ -16,8 +24,5 @@
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "sass": "^1.49.9"
-  },
-  "dependencies": {
-    "bootstrap": "^5.1.3"
   }
 }

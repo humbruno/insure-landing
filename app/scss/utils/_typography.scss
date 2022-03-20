@@ -1,0 +1,14 @@
+:root {
+  --fontPrimary: "Karla", sans-serif; // weights 400 700
+  --fontSecondary: "DM Serif Display", serif; // weights 400
+}
+
+html {
+  font-size: 100%;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

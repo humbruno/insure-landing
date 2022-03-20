@@ -5,14 +5,14 @@ const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 
 function buildStyles() {
-  return src("scss/**/*.scss")
+  return src("app/scss/**/*.scss")
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("css"));
 }
 
 function watchTask() {
-  watch(["scss/**/*.scss"], buildStyles);
+  watch(["app/scss/**/*.scss"], buildStyles);
 }
 
 exports.default = series(buildStyles, watchTask);

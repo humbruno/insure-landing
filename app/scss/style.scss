@@ -1,0 +1,8 @@
+@use "utils" as *;
+@use "navbar";
+
+body {
+  min-height: 100vh;
+  background-color: #202020;
+  overflow-x: hidden;
+}
