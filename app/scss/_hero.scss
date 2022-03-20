@@ -1,0 +1,112 @@
+@use "utils" as *;
+
+.hero {
+  display: flex;
+  position: relative;
+  min-height: 37.5em;
+
+  background-color: var(--darkViolet);
+  color: var(--veryLightGray);
+
+  font-family: var(--fontPrimary);
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  &:after {
+    content: "";
+    background: var(--veryLightGray);
+    position: absolute;
+    top: 7rem;
+    left: 170px;
+    height: 1px;
+    width: 200px;
+
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    margin: auto;
+    padding-left: 170px;
+
+    @include breakpoint-down(medium) {
+      order: 2;
+      padding-left: 0;
+      text-align: center;
+      padding: 100px 30px;
+
+      background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 50%;
+    }
+
+    h1 {
+      font-family: var(--fontSecondary);
+      font-size: rem(50);
+      font-weight: 400;
+      line-height: 1;
+
+      @include breakpoint-down(medium) {
+        font-size: rem(40);
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    button {
+      border: 2px solid var(--veryLightGray);
+      background-color: transparent;
+      color: var(--veryLightGray);
+      padding: 10px 25px;
+      margin-top: 40px;
+
+      font-family: var(--fontPrimary);
+      text-transform: uppercase;
+      font-weight: 700;
+
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+
+        background-color: var(--veryLightGray);
+        color: var(--darkViolet);
+      }
+    }
+  }
+
+  &__illustration {
+    flex: 1;
+  }
+}
+
+.hero__illustration-desktop {
+  display: none;
+
+  @include breakpoint(large) {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    right: 2%;
+    width: min(40%, 550px);
+    height: auto;
+  }
+}
+
+.hero__illustration-mobile {
+  display: block;
+  order: 1;
+  width: 100%;
+
+  @include breakpoint(large) {
+    display: none;
+  }
+}
