@@ -4,11 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  img {
-    //logo
-    margin: 2rem;
-  }
+  margin: 2rem;
 }
 
 .mobile-nav-toggle {
@@ -16,46 +12,87 @@
 }
 
 .primary-navigation {
-  background: hsl(0 0% 0% / 0.5);
+  background: transparent;
 
   font-family: var(--fontPrimary);
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 1rem;
 
   a {
     color: var(--darkGrayishViolet);
+    transition: all 150ms ease-in-out;
+
+    @include breakpoint(large) {
+      &:hover {
+        color: var(--veryDarkViolet);
+      }
+    }
+  }
+
+  button {
+    border: 2px solid var(--veryDarkViolet);
+    background-color: transparent;
+    color: var(--veryDarkViolet);
+    padding: 10px 25px;
+
+    font-family: var(--fontPrimary);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    transition: all 150ms ease-in-out;
 
     &:hover {
-      color: var(--veryDarkViolet);
+      cursor: pointer;
+
+      background-color: var(--veryDarkViolet);
+      color: var(--veryLightGray);
     }
   }
 }
 
-@supports (backdrop-filter: blur(1rem)) {
-  .primary-navigation {
-    background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem);
-  }
-}
-
-@media (max-width: 35em) {
+@media (max-width: 63.9375em) {
   .primary-navigation {
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 30%;
+    inset: 5rem 0 0 0;
     gap: 2em;
     flex-direction: column;
+    font-size: 1.25rem;
 
-    padding: min(30vh, 10rem) 2rem;
+    background-color: var(--veryDarkViolet);
+    background-image: url("../images/bg-pattern-mobile-nav.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding: min(30vh, 5rem) 2rem;
 
     transition: transform 250ms ease-in-out;
     transform: translateX(100%);
 
     a {
       color: white;
+
+      &:active {
+        color: var(--grayishBlue);
+      }
+    }
+
+    button {
+      border: 2px solid var(--veryLightGray);
+      background-color: transparent;
+      color: var(--veryLightGray);
+      font-size: 1.25rem;
+      transition: all 150ms ease-in-out;
+      padding: 20px 25vw;
+
+      &:active {
+        background-color: var(--veryLightGray);
+        color: var(--veryDarkViolet);
+      }
     }
 
     &[data-visible="true"] {
@@ -72,7 +109,7 @@
     width: 2rem;
     border: 0;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
     z-index: 9999;
 
