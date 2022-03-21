@@ -32,6 +32,7 @@
     flex: 1;
     margin: auto;
     padding-left: 170px;
+    position: relative;
 
     @include breakpoint-down(medium) {
       order: 2;
@@ -105,6 +106,41 @@
   display: block;
   order: 1;
   width: 100%;
+
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+#desktop-left {
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+#desktop-right {
+  position: absolute;
+  top: 105px;
+  right: 0;
+
+  display: block;
+
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+#mobile-bg-right {
+  position: absolute;
+  right: 0;
+  top: 70%;
+
+  display: block;
 
   @include breakpoint(large) {
     display: none;

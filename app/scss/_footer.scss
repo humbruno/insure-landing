@@ -1,0 +1,82 @@
+@use "utils" as *;
+
+.footer {
+  background-color: var(--veryLightGray);
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+
+  padding: 65px 160px;
+  margin-top: 150px;
+
+  @include breakpoint-down(medium) {
+    text-align: center;
+    padding: 85px 30px;
+
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    @include breakpoint-down(medium) {
+      margin-top: 40px;
+    }
+
+    a {
+      color: var(--darkGrayishViolet);
+      transition: color 150ms ease-in-out;
+
+      &:hover {
+        color: var(--veryDarkViole);
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 20%;
+    font-family: var(--fontPrimary);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(12);
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 25px;
+      line-height: 2;
+
+      li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    h4 {
+      color: var(--darkGrayishViolet);
+    }
+  }
+}
+
+hr {
+  margin: 35px 0;
+}

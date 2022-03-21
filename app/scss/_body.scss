@@ -1,9 +1,15 @@
 @use "utils" as *;
 
 .body {
-  margin-top: 20rem;
+  margin-top: 400px;
   padding: 0 160px;
   position: relative;
+
+  @include breakpoint-down(medium) {
+    margin-top: 200px;
+    padding: 0 30px;
+    text-align: center;
+  }
 
   h2 {
     font-family: var(--fontSecondary);
@@ -24,11 +30,12 @@
       position: absolute;
       top: -80px;
       left: 160px;
-      height: 1px;
+      height: 2px;
       width: 200px;
 
       @include breakpoint-down(medium) {
-        display: none;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 
@@ -37,6 +44,10 @@
       gap: 30px;
       list-style: none;
       margin-top: 80px;
+
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+      }
     }
 
     h3 {
@@ -66,9 +77,24 @@
     align-items: center;
     justify-content: space-between;
 
+    @include breakpoint-down(medium) {
+      background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top right;
+
+      flex-direction: column;
+      padding: 70px 40px;
+    }
+
     h2 {
       color: var(--veryLightGray);
       max-width: 46%;
+
+      @include breakpoint-down(medium) {
+        max-width: 100%;
+        font-size: rem(28);
+      }
     }
 
     button {
@@ -88,6 +114,10 @@
 
         background-color: var(--veryLightGray);
         color: var(--darkViolet);
+      }
+
+      @include breakpoint-down(medium) {
+        margin-top: 50px;
       }
     }
   }
