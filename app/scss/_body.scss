@@ -1,0 +1,94 @@
+@use "utils" as *;
+
+.body {
+  margin-top: 20rem;
+  padding: 0 160px;
+  position: relative;
+
+  h2 {
+    font-family: var(--fontSecondary);
+    color: var(--veryDarkViolet);
+    font-size: rem(50);
+    font-weight: 400;
+    line-height: 1;
+
+    @include breakpoint-down(medium) {
+      font-size: rem(40);
+    }
+  }
+
+  &__traits {
+    &:after {
+      content: "";
+      background: var(--darkGrayishViolet);
+      position: absolute;
+      top: -80px;
+      left: 160px;
+      height: 1px;
+      width: 200px;
+
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin-top: 80px;
+    }
+
+    h3 {
+      font-family: var(--fontSecondary);
+      font-weight: 400;
+      font-size: rem(24);
+      margin-top: 30px;
+    }
+
+    p {
+      font-family: var(--fontPrimary);
+      color: var(--darkGrayishViolet);
+      margin-top: 30px;
+    }
+  }
+
+  &__cta {
+    background-color: var(--darkViolet);
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+
+    padding: 60px 85px;
+    margin-top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      color: var(--veryLightGray);
+      max-width: 46%;
+    }
+
+    button {
+      border: 2px solid var(--veryLightGray);
+      background-color: transparent;
+      color: var(--veryLightGray);
+      padding: 10px 25px;
+
+      font-family: var(--fontPrimary);
+      text-transform: uppercase;
+      font-weight: 700;
+
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+
+        background-color: var(--veryLightGray);
+        color: var(--darkViolet);
+      }
+    }
+  }
+}

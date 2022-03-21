@@ -1,6 +1,7 @@
 @use "utils" as *;
 @use "navbar";
 @use "hero";
+@use "body";
 
 body {
   min-height: 100vh;
